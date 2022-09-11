@@ -45,6 +45,9 @@ h6 {
   background-image: url('./images/pattern-background-desktop.svg');
   background-repeat: no-repeat;
   background-size: contain;
+
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .container {
@@ -52,18 +55,27 @@ h6 {
   padding: 0.9rem;
   padding-top: 0rem;
   background-color: white;
+
   width: 90%;
-  max-width: 27rem;
+  max-width: 24rem;
   min-width: 15rem;
 
   display: flex;
   align-items: center;
   flex-direction: column;
+  /* overflow-x: hidden;
+  overflow-y: auto; */
+
+  overflow-y: hidden;
+  overflow-x: hidden;
 
   border-radius: 1rem;
-  overflow: hidden;
   z-index: 99;
 }
+
+/* .container::-webkit-scrollbar {
+  display: none;
+} */
 
 .color-bottom {
   position: fixed;
@@ -77,12 +89,13 @@ h6 {
   background-color: rgb(224, 232, 255);
 }
 
-.img-container {
+.image-hero {
+  height: 85%;
 }
 
 .order-header {
   font-size: 1.5rem;
-  padding: 1rem;
+  padding-bottom: 1rem;
   font-weight: 900;
   color: var(--clr-neutral-dark-blue);
 }
@@ -150,7 +163,7 @@ h6 {
   border: none;
   background-color: var(--clr-bright-blue);
   color: white;
-  height: 3rem;
+  min-height: 3rem;
   font-size: 0.9rem;
   margin-top: 1.4rem;
   font-weight: 700;
@@ -167,10 +180,11 @@ h6 {
   justify-content: center;
   align-items: center;
   width: 94%;
-  height: 3rem;
+  min-height: 3rem;
   border: none;
 
   margin-top: 1rem;
+  margin-bottom: -1rem;
 }
 
 .cancel-text {
