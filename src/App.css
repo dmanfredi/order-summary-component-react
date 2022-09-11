@@ -116,8 +116,8 @@ h6 {
   background-color: var(--clr-neutral-very-pale-blue);
   display: flex;
   width: 94%;
-  padding: 1rem, 0.6rem, 1rem, 0.6rem;
-  padding-left: 6;
+  padding: 1rem 1rem 1rem 1rem;
+  /* padding-left: 6rem; */
   align-items: center;
   justify-content: space-between;
   border-radius: 1rem;
@@ -129,14 +129,14 @@ h6 {
 
 .details-container {
   text-align: left;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
 .plan-name {
   color: var(--clr-neutral-dark-blue);
   font-weight: 900;
   padding: 0.2rem;
-  margin-left: 6px;
+  margin-left: 10px;
 }
 
 .plan-cost {
@@ -150,7 +150,7 @@ h6 {
   text-decoration: underline;
   font-weight: 600;
   font-size: 0.9rem;
-  margin-right: 10px;
+  /* margin-right: 7px; */
 }
 
 .change-plan:hover {
