@@ -1,38 +1,200 @@
-.App {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   text-align: center;
+  font-family: var(--font-main);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --clr-pale-blue: #e0e8ff;
+  --clr-bright-blue: #3829e0;
+
+  --clr-neutral-very-pale-blue: #f5f7ff;
+  --clr-neutral-desaturated-blue: #7280a7;
+  --clr-neutral-dark-blue: #1f2f56;
+
+  --font-main: 'Red Hat Display', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  background-color: var(--clr-pale-blue);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  font-family: var(--font-main);
+
+  background-image: url('./images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container {
+  margin: 1.5rem;
+  padding: 0.9rem;
+  padding-top: 0rem;
+  background-color: white;
+  width: 90%;
+  max-width: 27rem;
+  min-width: 15rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  border-radius: 1rem;
+  overflow: hidden;
+  z-index: 99;
+}
+
+.color-bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  transform: translateY(62.5%);
+
+  background-color: rgb(224, 232, 255);
+}
+
+.img-container {
+}
+
+.order-header {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-weight: 900;
+  color: var(--clr-neutral-dark-blue);
+}
+
+.order-description {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1.4rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  color: var(--clr-neutral-desaturated-blue);
+
+  line-height: 1.5rem;
+}
+
+.plan-container {
+  background-color: var(--clr-neutral-very-pale-blue);
+  display: flex;
+  width: 94%;
+  padding: 1rem 0.6rem 1rem 0.6rem;
+  padding-left: 6;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+}
+
+.left-container {
+  display: flex;
+}
+
+.details-container {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.plan-name {
+  color: var(--clr-neutral-dark-blue);
+  font-weight: 900;
+  padding: 0.2rem;
+  margin-left: 6px;
+}
+
+.plan-cost {
+  color: var(--clr-neutral-desaturated-blue);
+}
+
+.change-plan {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--clr-bright-blue);
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-right: 10px;
+}
+
+.change-plan:hover {
+  color: #607cc8;
+  text-decoration: none;
+}
+
+.confirm {
+  width: 94%;
+  border: none;
+  background-color: var(--clr-bright-blue);
   color: white;
+  height: 3rem;
+  font-size: 0.9rem;
+  margin-top: 1.4rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 40px -7px;
 }
 
-.App-link {
-  color: #61dafb;
+.confirm:hover {
+  background-color: #4366c7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.cancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 94%;
+  height: 3rem;
+  border: none;
+
+  margin-top: 1rem;
+}
+
+.cancel-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--clr-neutral-desaturated-blue);
+}
+
+.cancel-text:hover {
+  color: var(--clr-neutral-dark-blue);
+}
+
+.button {
+  cursor: pointer;
+}
+
+@media (min-width: 460px) {
+  .container {
+    padding: 1.9rem;
+    padding-top: 0rem;
   }
 }
