@@ -59,6 +59,7 @@ h6 {
   width: 90%;
   max-width: 24rem;
   min-width: 15rem;
+  height: 570px;
 
   display: flex;
   align-items: center;
@@ -130,7 +131,6 @@ h6 {
 .details-container {
   text-align: left;
   margin-left: 0.5rem;
-  
 }
 
 .plan-name {
